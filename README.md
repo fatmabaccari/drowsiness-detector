@@ -14,16 +14,14 @@ Ce projet détecte les signes de somnolence ("drowsiness") à partir de flux vid
 
 ## 📁 Structure du projet
 
+```
 drowsiness-detector/
-├── data/ # Images et labels
-├── drowsiness_detector.py # Script principal
-├── requirements.txt # Dépendances Python
-├── README.md # Documentation (ce fichier)
-└── .gitignore # Fichiers ignorés par git
-
-yaml
-Copier
-Modifier
+├── data/                      # Images et labels
+├── drowsiness_detector.py     # Script principal
+├── requirements.txt           # Dépendances Python
+├── README.md                  # Documentation (ce fichier)
+└── .gitignore                 # Fichiers ignorés par git
+```
 
 ---
 
@@ -34,50 +32,65 @@ Modifier
 ```bash
 git clone https://github.com/TON_UTILISATEUR/drowsiness-detector.git
 cd drowsiness-detector
-Créez et activez un environnement virtuel :
+```
 
-bash
-Copier
-Modifier
+2. Créez et activez un environnement virtuel :
+
+```bash
 python -m venv venv
+```
 
-# Windows PowerShell
+- Sous Windows PowerShell :
+
+```powershell
 .\venv\Scripts\Activate.ps1
+```
 
-# Windows CMD
+- Sous Windows CMD :
+
+```cmd
 venv\Scripts\activate.bat
+```
 
-# Linux / MacOS
+- Sous Linux / macOS :
+
+```bash
 source venv/bin/activate
-Installez les dépendances :
+```
 
-bash
-Copier
-Modifier
+3. Installez les dépendances :
+
+```bash
 pip install -r requirements.txt
-🚴‍♂️ Usage
+```
+
+---
+
+## 🚴‍♂️ Usage
+
 Lancez le script principal :
 
-bash
-Copier
-Modifier
+```bash
 python drowsiness_detector.py
-Le programme affichera quelques images d'exemple
+```
 
-Puis entraînera les modèles et affichera des résultats
+- Le programme affichera quelques images d'exemple  
+- Puis entraînera les modèles et affichera les résultats  
+- Enfin, ouvrira la webcam pour détecter l’état d’éveil en temps réel  
 
-Enfin, ouvrira la webcam pour détecter l’état d’éveil en temps réel
+Appuyez sur **q** pour quitter.
 
-Appuyez sur q pour quitter
+---
 
-📊 Détails techniques
-Les images doivent être placées dans data/images/
+## 📊 Détails techniques
 
-Les labels (fichiers .txt) doivent être dans data/labels/
+- Les images doivent être placées dans `data/images/`  
+- Les labels (fichiers `.txt`) doivent être dans `data/labels/`  
+- Les modèles utilisent scikit-learn avec recherche de paramètres (`GridSearchCV`)  
+- Affichage des matrices de confusion et graphiques avec matplotlib et seaborn  
 
-Les modèles utilisent scikit-learn avec recherche de paramètres (GridSearchCV)
+---
 
-Affichage des matrices de confusion et graphiques avec matplotlib et seaborn
+## ✉️ Contact
 
-✉️ Contact
 Pour toute question : baccarifatma842003@gmail.com
